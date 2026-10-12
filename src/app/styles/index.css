@@ -1,0 +1,143 @@
+@import 'tailwindcss';
+@import './fonts.css';
+
+@theme {
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #000000;
+  --color-muted: #4f4f4f;
+  --color-brand: #e9672b;
+  --color-brand-dark: #cf5317;
+  --color-cream: #fbf8f5;
+  --color-sand: #f3f0ec;
+  --color-blush: #f6cfca;
+  --color-lavender: #cbc6f4;
+  --color-sun: #e7cb43;
+  --color-mint: #a2d4c5;
+  --color-mint-light: #93d6c4;
+  --color-cobalt: #225dca;
+  --color-navy: #242947;
+  --color-tomato: #de4333;
+  --color-rust: #af4920;
+  --color-lime: #cdd453;
+
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-fade-up: fade-up 0.9s var(--ease-out-expo) both;
+  --animate-clip-reveal: clip-reveal 1.4s var(--ease-out-expo) both;
+  --animate-ken-burns: ken-burns 20s ease-in-out infinite alternate;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pop: pop 0.45s var(--ease-out-expo);
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes clip-reveal {
+    from {
+      clip-path: inset(0 0 0 100%);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  @keyframes ken-burns {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.08);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-14px) rotate(-2deg);
+    }
+  }
+
+  @keyframes pop {
+    0% {
+      transform: scale(0.4);
+    }
+    60% {
+      transform: scale(1.25);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+/* Отступ контейнера: используется в Container и в утилитах "вылета" за край */
+:root {
+  --gutter: 1rem;
+  --container: 72rem;
+}
+
+@media (width >= 48rem) {
+  :root {
+    --gutter: 2rem;
+  }
+}
+
+/* Блок выходит за правый край контейнера до края экрана */
+@utility bleed-r {
+  margin-right: calc(-1 * max(var(--gutter), (100vw - var(--container)) / 2 + var(--gutter)));
+}
+
+/* Горизонтальный скролл-трек: начинается от края контейнера, уходит до края экрана */
+@utility bleed-x {
+  padding-inline: max(var(--gutter), (100vw - var(--container)) / 2 + var(--gutter));
+  scroll-padding-inline: max(var(--gutter), (100vw - var(--container)) / 2 + var(--gutter));
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    @apply bg-brand text-white;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      transition-delay: 0ms !important;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export { accents } from './accents'
