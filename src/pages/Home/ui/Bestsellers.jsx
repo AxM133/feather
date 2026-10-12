@@ -1,17 +1,21 @@
-import { bestsellers, ProductCard } from '@/entities/product'
+import { ProductCard, useBestsellers } from '@/entities/product'
 import { AddToCartButton } from '@/features/add-to-cart'
 import { Container, Reveal, SectionTitle, TextLink } from '@/shared/ui'
 import { bestsellersContent } from '../config'
 
 export function Bestsellers() {
+  const { products, isLoading, error } = useBestsellers()
+
   return (
     <section id={bestsellersContent.id} className="scroll-mt-16 bg-cream pt-24 pb-24 md:pt-[110px] md:pb-[150px]">
       <Container className="max-w-[1008px]">
         <SectionTitle size="md" className="mb-14">
           {bestsellersContent.title}
         </SectionTitle>
+        {isLoading && <p className="text-center">Загрузка...</p>}
+        {error && <p className="text-center text-red-600">{error}</p>}
         <ul className="grid grid-cols-2 gap-1 lg:grid-cols-4">
-          {bestsellers.map((product, index) => (
+          {products.map((product, index) => (
             <Reveal as="li" key={product.id} delay={index * 120}>
               <ProductCard product={product} actions={<AddToCartButton product={product} />} />
             </Reveal>

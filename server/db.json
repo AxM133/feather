@@ -1,0 +1,274 @@
+{
+  "products": [
+    {
+      "id": "cooper-dining-table",
+      "name": "Cooper Dining Table",
+      "image": "/images/product-cooper-table.jpg",
+      "rent": 15,
+      "retail": 359,
+      "price": 314,
+      "bestseller": true
+    },
+    {
+      "id": "croft-media-console",
+      "name": "Croft Media Console",
+      "image": "/images/product-croft-console.jpg",
+      "rent": 35,
+      "retail": 839,
+      "price": 739,
+      "bestseller": true
+    },
+    {
+      "id": "essex-dining-chair",
+      "name": "Essex Dining Chair",
+      "image": "/images/product-essex-chair.jpg",
+      "rent": 18,
+      "retail": 429,
+      "price": 379,
+      "bestseller": true
+    },
+    {
+      "id": "ludlow-sofa",
+      "name": "Ludlow Sofa",
+      "image": "/images/product-ludlow-sofa.jpg",
+      "rent": 52,
+      "retail": 1249,
+      "price": 1099,
+      "bestseller": true
+    }
+  ],
+  "rooms": [
+    {
+      "id": "living-room",
+      "title": "Living Room",
+      "href": "#",
+      "image": "/images/room-living.jpg"
+    },
+    {
+      "id": "bedroom",
+      "title": "Bedroom",
+      "href": "#",
+      "image": "/images/room-bedroom.jpg"
+    },
+    {
+      "id": "home-office",
+      "title": "Home Office",
+      "href": "#",
+      "image": "/images/room-office.jpg"
+    },
+    {
+      "id": "dining-room",
+      "title": "Dining Room",
+      "href": "#",
+      "image": "/images/room-dining.jpg"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "julie",
+      "text": "Honestly BEST EXPERIENCE moving ever.",
+      "author": "Julie",
+      "location": "San Francisco, CA",
+      "rating": 5
+    },
+    {
+      "id": "anthony",
+      "text": "Extremely easy! Browsed for furniture and it was in my new apartment within a week.",
+      "author": "Anthony",
+      "location": "Los Angeles, CA",
+      "rating": 5
+    },
+    {
+      "id": "wesley",
+      "text": "THIS JUST MAKES SENSE. Truly obsessed with Feather.",
+      "author": "Wesley",
+      "location": "New York City, NY",
+      "rating": 5
+    },
+    {
+      "id": "maya",
+      "text": "Swapped my sofa when I moved in with my partner. Zero stress, zero screwdrivers.",
+      "author": "Maya",
+      "location": "Brooklyn, NY",
+      "rating": 5
+    },
+    {
+      "id": "daniel",
+      "text": "Delivery team was on time, kind and fast. The whole place was set up in an hour.",
+      "author": "Daniel",
+      "location": "Oakland, CA",
+      "rating": 5
+    },
+    {
+      "id": "sofia",
+      "text": "Love that I can furnish beautifully without committing forever.",
+      "author": "Sofia",
+      "location": "Santa Monica, CA",
+      "rating": 5
+    }
+  ],
+  "zones": [
+    {
+      "id": "100",
+      "city": "New York City"
+    },
+    {
+      "id": "101",
+      "city": "New York City"
+    },
+    {
+      "id": "102",
+      "city": "New York City"
+    },
+    {
+      "id": "103",
+      "city": "New York City"
+    },
+    {
+      "id": "104",
+      "city": "New York City"
+    },
+    {
+      "id": "110",
+      "city": "New York City"
+    },
+    {
+      "id": "111",
+      "city": "New York City"
+    },
+    {
+      "id": "112",
+      "city": "New York City"
+    },
+    {
+      "id": "113",
+      "city": "New York City"
+    },
+    {
+      "id": "114",
+      "city": "New York City"
+    },
+    {
+      "id": "116",
+      "city": "New York City"
+    },
+    {
+      "id": "900",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "901",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "902",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "903",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "904",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "905",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "906",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "907",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "908",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "910",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "911",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "912",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "913",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "914",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "915",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "916",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "917",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "918",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "940",
+      "city": "San Francisco"
+    },
+    {
+      "id": "941",
+      "city": "San Francisco"
+    },
+    {
+      "id": "943",
+      "city": "San Francisco"
+    },
+    {
+      "id": "944",
+      "city": "San Francisco"
+    },
+    {
+      "id": "945",
+      "city": "San Francisco"
+    },
+    {
+      "id": "946",
+      "city": "San Francisco"
+    },
+    {
+      "id": "947",
+      "city": "San Francisco"
+    },
+    {
+      "id": "948",
+      "city": "San Francisco"
+    },
+    {
+      "id": "949",
+      "city": "San Francisco"
+    },
+    {
+      "id": "950",
+      "city": "San Francisco"
+    },
+    {
+      "id": "951",
+      "city": "San Francisco"
+    }
+  ],
+  "subscribers": [],
+  "cart": []
+}
