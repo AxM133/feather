@@ -7,18 +7,23 @@ export function useBestsellers() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
+        const controller = new AbortController()
+
         async function load() {
             try {
-                const data = await getBestsellers();
+                const data = await getBestsellers(controller.signal);
                 setProducts(data);
             } catch (err) {
-                setError(err.message);
+                if (!controller.signal.aborted) setError(err.message);
             } finally {
-                setIsLoading(false);
+                if (!controller.signal.aborted) setIsLoading(false)
             }
         }
 
         load();
+
+        return () => controller.abort();
     }, []);
+
     return { products, isLoading, error };
 }
